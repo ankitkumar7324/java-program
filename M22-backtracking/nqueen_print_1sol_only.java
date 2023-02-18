@@ -1,4 +1,5 @@
-public class nqueen_2 {
+public class nqueen_print_1sol_only {
+    
     public static boolean issafe(char board[][],int row,int col)
     {
         // vertical up
@@ -31,14 +32,14 @@ public class nqueen_2 {
         }
         return true;
     }
-    public static void nqueen(char board[][],int row)
+    public static boolean nqueen(char board[][],int row)
     {
         // base case
         if(row==board.length)
         {
             // printboard(board);
-            count++;
-            return;
+            // count++;
+            return true;
         }
         // column case
         for(int j=0;j<board.length;j++)
@@ -46,10 +47,14 @@ public class nqueen_2 {
             if(issafe(board,row,j))
             {
             board[row][j]='Q';
-            nqueen(board, row+1);
+            if(nqueen(board, row+1))
+            {
+                return true;
+            }
             board[row][j]='x';
             }
         }
+        return false;
     }
     public static void printboard(char board[][])
     {
@@ -75,10 +80,19 @@ public class nqueen_2 {
                 board[i][j]='x';
             }
         }
-        nqueen(board,0);
-        System.out.println("the total number of ways to solve nqueen = "+count);
+        
+        // System.out.println("the total number of ways to solve nqueen = "+count);
+        if(nqueen(board,0))
+        {
+            System.out.println("solution is posiible");
+            printboard(board);
+        }
+        else{
+            System.out.println("solution is not possible");
+        }
 
 
 
     }
 }
+
