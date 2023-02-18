@@ -27,8 +27,9 @@ public class nqueen_print_1sol_only {
             if(board[i][j]=='Q')
             {
                 return false;
-            }
 
+            }
+            
         }
         return true;
     }
