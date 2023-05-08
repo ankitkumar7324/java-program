@@ -47,14 +47,30 @@ public class implement_using_ArrayList{
 
     public static void main(String args[])
     {
-        stack s=new stack();
-        s.push(1); 
-        s.push(2);
-        s.push(3);
-        while(!s.isempty())
+        // stack s=new stack();
+        // s.push(1); 
+        // s.push(2);
+        // s.push(3);
+        // while(!s.isempty())
+        // {
+        //      System.out.println(s.peek());
+        //      s.pop();
+        // }
+
+        // we use both the way to call the function
+
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        while(!stack.isempty())
         {
-             System.out.println(s.peek());
-             s.pop();
+            System.out.println(stack.peek());
+            stack.pop();
         }
     }
 }
+
+// output
+// 3
+// 2
+// 1
