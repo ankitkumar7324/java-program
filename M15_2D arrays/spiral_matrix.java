@@ -22,11 +22,11 @@ public class spiral_matrix
             // bottom
             for(int j=endcol-1;j>=startcol;j--)
             {
-                System.out.print(matrix[endrow][j]+" ");
                 if(startrow==endrow)
                 {
                     break; 
                 }
+                System.out.print(matrix[endrow][j]+" ");
             }
             // left
             for(int i=endrow-1;i>=startrow+1;i--)
