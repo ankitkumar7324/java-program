@@ -1,23 +1,20 @@
 public class String_compression {
 
-    public static String compression(String str)
-    {
+    public static String compression(String str) {
         String newStr = "";
-        for(int i=0;i<str.length();i++)
-        {
-            Integer count =1;
-            while(i<str.length()-1 && str.charAt(i) == str.charAt(i+1))
-            {
+        for (int i = 0; i < str.length(); i++) {
+            Integer count = 1;
+            while (i < str.length() - 1 && str.charAt(i) == str.charAt(i + 1)) {
                 count++;
                 i++;
             }
             newStr += str.charAt(i);
-            if(count >1)
-            {
+            if (count > 1) {
                 newStr += count.toString();
             }
 
         }
+
         return newStr;
 
     }
@@ -26,6 +23,6 @@ public class String_compression {
         String str = "aaaabbbbcccdd";
         System.out.println(compression(str));
     }
-    
+
 }
 // output a4b4c3d2
